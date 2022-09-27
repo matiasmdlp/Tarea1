@@ -1,4 +1,4 @@
 # Tarea1
 
 # Nombres: Matias Leonardo Medina De La Peña (N° Matricula 2021409637) 
-# 	   Joaquin Avalos
+#          Joaquin Sebastian Avalos Panes (Nº Matricula 2021413898)
