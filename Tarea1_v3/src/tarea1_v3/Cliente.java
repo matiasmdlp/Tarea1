@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tarea1_v3;
 
-/**
- *
- * @author jackfeels
- */
 public class Cliente {
+    private String nombre;
+    private String rut;
     
+    public Cliente(String n, String r){
+        nombre = n;
+        rut = r;
+    }
 }
