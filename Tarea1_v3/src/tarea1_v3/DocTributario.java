@@ -30,13 +30,3 @@ public class DocTributario {
     }
 }
 
-class Boleta extends DocTributario{
-    public Boleta(){
-    }
-}
-
-class Factura extends DocTributario{
-    public Factura(){
-    }
-}
-
