@@ -3,25 +3,31 @@ package tarea1_v3;
 
 public class DetalleOrden {
     private int cantidad;
+    private Articulo articulo;
 
-    public DetalleOrden() {
+    public DetalleOrden(Articulo art, int n) {
+        articulo=art;
+        cantidad=n;
+    }
+    
+    public String toString() {
+        return "articulo: "+articulo.getNombre()+"("+cantidad+")";
+    }
+    
+    public float calcPeso() {
+        return articulo.getPeso();
+    }
+    
+    public float calcPrecio() {
+        return calcPrecioSinIVA()+CalcIVA();
     }
 
-    public float calcPrecio(Articulo a) {
-        return 0;
+    public float calcPrecioSinIVA() {
+        return articulo.getPrecio(); 
     }
 
-    public float calcPrecioSinIVA(Articulo a) {
-        float precio = a.getPrecio();
-        return precio;
+    public float CalcIVA() {
+        return articulo.getPrecio() * (float) 0.19;
     }
 
-    public float CalcIVA(Articulo a) {
-        float p = a.getPrecio() * (float) 1.19;
-        return p;
-    }
-
-    public float calcPeso(Articulo a) {
-        return a.getPeso();
-    }
 }

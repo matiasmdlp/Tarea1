@@ -5,19 +5,14 @@ public class Transferencia extends Pago {
     private String banco;
     private String numCuenta;
 
-    public Transferencia() {
-    }
-
-    public void setbanco(String b) {
-        banco = b;
+    public Transferencia(String banc, String numc, float p, OrdenCompra o) {
+        super(o, p);
+        banco=banc;
+        numCuenta=numc;
     }
 
     public String getbanco() {
         return banco;
-    }
-
-    public void setnumCuenta(String nc) {
-        numCuenta = nc;
     }
 
     public String getnumCuenta() {

@@ -5,16 +5,18 @@ public class Tarjeta extends Pago {
     private String tipo;
     private String numTransaccion;
 
-    public Tarjeta() {
-        numTransaccion = super.numtran();
-    }
-
-    public void settipo(String t) {
-        tipo = t;
+    public Tarjeta(String tip, String numtrans, float p, OrdenCompra o){
+        super(o, p);
+        tipo=tip;
+        numTransaccion=numtrans;  
     }
 
     public String gettipo() {
         return tipo;
+    }
+    
+    public String getnumtrans(){
+        return numTransaccion;
     }
 
 }

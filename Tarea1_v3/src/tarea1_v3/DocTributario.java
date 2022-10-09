@@ -9,24 +9,26 @@ public class DocTributario {
     private String rut;
     private Date fecha;
     
-    public DocTributario(){
+    public DocTributario(String num, String r){
         fecha = new Date();
+        numero=num;
+        rut=r;
     }
     
-    public void setnumero(String n){
-        numero = n;
+    public String toString(){
+        return "Numero: "+numero+"\nfecha: "+fecha+"\n Rut"+rut;
     }
     
     public String getnumero(){
         return numero;
     }
-    
-    public void setrut(String r){
-        numero = r;
-    }
-    
+       
     public String getrut(){
         return rut;
+    }
+    
+    public Date getFecha(){
+        return fecha;
     }
 }
 

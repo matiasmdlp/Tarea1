@@ -7,4 +7,8 @@ public class Direccion {
     public Direccion(String d){
         direccion = d;
     }
+    
+    public String getdireccion(){
+        return direccion;
+    }
 }

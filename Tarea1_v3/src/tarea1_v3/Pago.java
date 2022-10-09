@@ -3,26 +3,30 @@ package tarea1_v3;
 import java.util.Date;
 
 public class Pago {
-
+    private OrdenCompra orden;
     private float monto;
     private Date fecha;
-    private int i = 0;
-
-    public Pago() {
+    
+    public Pago(OrdenCompra ord,float m) {
         fecha = new Date();
+        monto = m;
+        orden=ord;
     }
-
+    
+    public String toString() {
+        return "fecha: "+fecha+"\nmonto: "+monto;
+    }
+        
     public float getmonto() {
         return monto;
     }
-
-    public void setmonto(float m) {
-        monto = m;
+    
+    public float getprecio(){
+        return orden.calcprecio(); 
     }
-
-    public String numtran() {
-        i++;
-        return "i";
+    
+    public Date getfecha() {
+        return fecha;
     }
 }
 
