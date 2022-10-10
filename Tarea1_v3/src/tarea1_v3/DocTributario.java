@@ -16,7 +16,7 @@ public class DocTributario {
     }
     
     public String toString(){
-        return "Numero: "+numero+"\nfecha: "+fecha+"\n Rut"+rut;
+        return "Numero: "+numero+"\nFecha: "+fecha+"\nRut: "+rut;
     }
     
     public String getnumero(){

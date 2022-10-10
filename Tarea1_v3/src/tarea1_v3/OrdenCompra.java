@@ -3,6 +3,7 @@ package tarea1_v3;
 
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class OrdenCompra { 
     private Date fecha;
@@ -68,4 +69,15 @@ public class OrdenCompra {
         DetalleOrden aux = new DetalleOrden(articulo,cantidad);
         detalles.add(aux);
     }
+    /*public void CallToPago(Pago pago){
+        System.out.println("¿Cual metodo de Pago desea usar?");
+        System.out.println("Responda 1 para Efectivo, 2 para Transferencia o 3 para Tarjeta");
+        int num = System.in.read();
+        switch(num){
+            case 1: 
+                
+                
+        }
+        
+    }*/
 }

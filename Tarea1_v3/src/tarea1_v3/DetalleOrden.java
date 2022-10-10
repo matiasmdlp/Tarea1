@@ -15,19 +15,19 @@ public class DetalleOrden {
     }
     
     public float calcPeso() {
-        return articulo.getPeso();
+        return cantidad * articulo.getPeso();
     }
     
     public float calcPrecio() {
-        return calcPrecioSinIVA()+CalcIVA();
+        return cantidad * calcPrecioSinIVA()+CalcIVA();
     }
 
     public float calcPrecioSinIVA() {
-        return articulo.getPrecio(); 
+        return cantidad * articulo.getPrecio(); 
     }
 
     public float CalcIVA() {
-        return articulo.getPrecio() * (float) 0.19;
+        return cantidad * (float) 0.19;
     }
 
 }
