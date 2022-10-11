@@ -1,8 +1,10 @@
 package tarea1_v3;
 
+import java.io.IOException;
+
 public class Tarea1_v3 {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Articulo Zapato = new Articulo("Zapato", 40, "Calzado", 0.4f);
         Articulo Polera = new Articulo("Polera", 15, "Ropa", 0.1f);
         Articulo Reloj = new Articulo("Reloj", 80, "Accesorio", 0.3f);
@@ -54,6 +56,7 @@ public class Tarea1_v3 {
         d.setDetalleOrden(Zapato, 3);
         d.setDetalleOrden(Reloj, 1);
         d.setDetalleOrden(Poleron, 3);
+        d.CallToPago(d, d.calcprecio());
         
 
         System.out.println(d.toString() + "\nPrecio: " + d.calcprecio() + "\npeso:" + d.calcpeso());

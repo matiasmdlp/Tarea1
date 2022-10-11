@@ -10,11 +10,11 @@ public class Pago {
     public Pago(OrdenCompra ord,float m) {
         fecha = new Date();
         monto = m;
-        orden=ord;
+        orden = ord;
     }
     
     public String toString() {
-        return "fecha: "+fecha+"\nmonto: "+monto;
+        return "fecha: "+fecha+"\nmonto: "+ monto;
     }
         
     public float getmonto() {

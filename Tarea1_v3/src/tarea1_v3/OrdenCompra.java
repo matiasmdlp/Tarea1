@@ -1,6 +1,7 @@
 
 package tarea1_v3;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,6 +13,9 @@ public class OrdenCompra {
     private ArrayList<Pago> pagos;
     private Cliente cliente;
     private DocTributario documentoTrib;
+    private Pago efectivo;
+    private Pago transferencia;
+    private Pago tarjeta;
     
     public OrdenCompra(DocTributario docTrib, Cliente c) {
         fecha = new Date();
@@ -69,15 +73,32 @@ public class OrdenCompra {
         DetalleOrden aux = new DetalleOrden(articulo,cantidad);
         detalles.add(aux);
     }
-    /*public void CallToPago(Pago pago){
-        System.out.println("¿Cual metodo de Pago desea usar?");
+    public void setYaPagado(OrdenCompra oc){
+        oc.estado = "Pago realizado";
+    }
+    public void CallToPago(OrdenCompra oc,float p) throws IOException {
+
+        System.out.println("¿Cual metodo de Pago desea usar para pagar la orden de : \n" + oc.cliente + "\n?");
         System.out.println("Responda 1 para Efectivo, 2 para Transferencia o 3 para Tarjeta");
         int num = System.in.read();
-        switch(num){
-            case 1: 
-                
-                
+        switch (num) {
+            case 1:
+                efectivo = new Efectivo(p,oc);
+                setYaPagado(oc);
+                break;
+            case 2:
+                transferencia = new Transferencia(oc,p);
+                setYaPagado(oc);
+                break;
+
+            case 3:
+                System.out.println("Responda 1 para Debito o 2 para Credito");
+                Scanner sc = new Scanner(System.in);
+                String tipo = sc.nextLine();
+                tarjeta = new Tarjeta(tipo,p,oc); 
+                setYaPagado(oc);
+                break;
         }
-        
-    }*/
+    }
 }
+        

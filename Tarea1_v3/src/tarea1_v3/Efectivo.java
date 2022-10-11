@@ -7,8 +7,8 @@ public class Efectivo extends Pago {
     }
 
     public float calcDevolucion() {
-            float devolucion;
-            devolucion = super.getprecio() - super.getmonto();
-            return devolucion;
-        }
+        float devolucion;
+        devolucion = super.getprecio() - super.getmonto();
+        return devolucion;
+    }
 }
